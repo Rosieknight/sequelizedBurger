@@ -7,7 +7,7 @@ var burger = require("../models/burger.js");
 
 //Routing time! Time to follow a path to the world...
 //This is the path for the info on all the burgers.
-router.get("/", function(req, res) {
+/*router.get("/", function(req, res) {
   burger.all(function(data) {
     var hbsObject = {
       my_burgers: data
@@ -40,6 +40,6 @@ router.put("/:id", function(req, res) {
     res.redirect("/");
   });
 });
-
+*/
 // Export routes for server.js to use.
 module.exports = router;
