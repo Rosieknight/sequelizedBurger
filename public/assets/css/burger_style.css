@@ -1,0 +1,40 @@
+body{
+	background-image: url("../img/fries.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.jumbotron{
+	background-color:transparent !important;
+}
+
+.pretty{
+	background-color: #d9edf7;
+}
+
+.eaten li{
+	background-color: #d9edf7;
+	border: 2px solid black;
+	padding: 5px;
+	margin: 5px;
+}
+
+.toeat li{
+	background-color: #d9edf7;
+	border: 2px solid black;
+	padding: 5px;
+	margin: 5px;
+}
+
+#newstuff{
+	background: #c1f8cd;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
