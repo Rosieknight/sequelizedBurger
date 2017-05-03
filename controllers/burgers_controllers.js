@@ -14,7 +14,7 @@ module.exports = function(app) {
         var hbsObject = {
           my_burgers: results
         };
-        res.render("index", {my_burgers:results});
+        res.render("index", {my_burger:results});
      });
   });
 
