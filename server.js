@@ -5,7 +5,7 @@ var methodOverride = require("method-override");
 var db = require("./models");
 
 //The flexible port method.
-var PORT = /*process.env.PORT ||*/ 8080;
+var PORT = process.env.PORT || 8080;
 
 //I just find this useful.
 var app = express();
