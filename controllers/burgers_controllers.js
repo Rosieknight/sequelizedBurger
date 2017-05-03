@@ -12,7 +12,7 @@ module.exports = function(app) {
     db.my_burger.findAll({})
     .then(function(results){
         var hbsObject = {
-          my_burgers: results
+          my_burger: results
         };
         res.render("index", {my_burger:results});
      });
