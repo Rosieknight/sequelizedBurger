@@ -4,15 +4,8 @@ var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 var db = require("./models");
 
-//Sync! Before expresss.
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
-});;
-
 //The flexible port method.
-var PORT = process.env.PORT || 3000;
+var PORT = /*process.env.PORT ||*/ 8080;
 
 //I just find this useful.
 var app = express();
@@ -21,7 +14,6 @@ var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Static directory
 app.use(express.static("./public"));
@@ -36,6 +28,12 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 //Imports routes that the server needs access to.
-var routes = require("./controllers/burgers_controllers.js");
+require("./controllers/burgers_controllers.js")(app);
 
-app.use("/", routes);
+
+//Sync! Before expresss.
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
+});;

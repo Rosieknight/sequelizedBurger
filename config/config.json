@@ -2,8 +2,8 @@
   "development": {
     "username": "root",
     "password": "Letfr33domring!",
-    "database": "burgers_db",
-    "host": "127.0.0.1",
+    "database": "burger2_db",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
@@ -15,8 +15,8 @@
   },
   "production": {
     "username": "root",
-    "password": "Letfr33domring!",
-    "database": "burgers_db",
+    "password": "",
+    "database": "",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }

@@ -8,7 +8,6 @@ module.exports = function(sequelize, DataTypes){
     burger_name: {
       type: DataTypes.STRING,
       validate: {
-        allowNull: false,
         len: [1]
       }
     },
@@ -17,7 +16,6 @@ module.exports = function(sequelize, DataTypes){
       type: DataTypes.BOOLEAN,
       defaultValue: false
     },
-    //Created At? I need to check something first...
   });
   return Burger;
   
